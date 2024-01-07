@@ -6,6 +6,13 @@ import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
+import GamingVideos from "./components/GamingVideos";
+import MusicVideos from "./components/MusicVideos";
+import Automotive from "./components/Automotive"
+import NewsVideos from "./components/NewsVideos";
+import ComedyVideos from "./components/Comedy";
+import SportsVideos from "./components/SportsVideos"
+
 
 const appRouter = createBrowserRouter([
   {
@@ -19,6 +26,30 @@ const appRouter = createBrowserRouter([
       {
         path:"watch",
         element:<WatchPage />
+      },
+      {
+        path:"gaming",
+        element:<GamingVideos />
+      },
+      {
+        path:"music",
+        element:<MusicVideos />
+      },
+      {
+        path:"autovehicle",
+        element:<Automotive />
+      },
+      {
+        path:"news",
+        element:<NewsVideos />
+      },
+      {
+        path:"comedy",
+        element:<ComedyVideos />
+      },
+      {
+        path:"sports",
+        element:<SportsVideos />
       }
     ] 
   }

@@ -1,18 +1,20 @@
 import React from 'react'
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 const ButtonList = () => {
   return (
     <div className='flex'>
       <Button name="All"/>
-      <Button name="Indie"/>
-      <Button name="Gaming"/>
-      <Button name="Music"/>
-      <Button name="Sports"/>
-      <Button name="News"/>
-      <Button name="Racing"/>
-      <Button name="Live"/>
-      <Button name="T-Series"/>
+      {/* <Button name="Indie"/> */}
+      <Link to="/gaming"><Button name="Gaming"/></Link>
+      <Link to="/music"><Button name="Music"/></Link>
+      <Link to="/sports"><Button name="Sports"/></Link>
+      <Link to="/news"><Button name="News"/></Link>
+      <Link to="/autovehicle"><Button name="Autos&Vehicles"/></Link>
+      <Link to="/comedy"><Button name="Comedy"/></Link>
+      {/* <Button name="Live"/>
+      <Button name="T-Series"/> */}
     </div>
   )
 }
