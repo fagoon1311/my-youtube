@@ -12,6 +12,7 @@ import Automotive from "./components/Automotive"
 import NewsVideos from "./components/NewsVideos";
 import ComedyVideos from "./components/Comedy";
 import SportsVideos from "./components/SportsVideos"
+import VideoContainer from "./components/VideoContainer";
 
 
 const appRouter = createBrowserRouter([
@@ -21,16 +22,22 @@ const appRouter = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<MainContainer />
+        element:<MainContainer />,
+        children:[{
+          path:"gaming",
+          element:<GamingVideos />
+        },
+        {
+          path:"/",
+          element:<VideoContainer />
+        },
+     ]
       },
       {
         path:"watch",
         element:<WatchPage />
       },
-      {
-        path:"gaming",
-        element:<GamingVideos />
-      },
+      
       {
         path:"music",
         element:<MusicVideos />

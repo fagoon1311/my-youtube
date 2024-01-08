@@ -19,6 +19,7 @@ const GamingVideos = () => {
   }
   return (
     <div className='flex flex-wrap'>
+     
       {gamingVideos.map((video)=>(
       <Link to={"/watch?v="+ video.id} key={video.id} ><VideoCard info={video}/></Link>
       ))}
