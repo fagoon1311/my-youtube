@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ButtonList = () => {
   return (
     <div className='flex'>
-      <Button name="All"/>
+      <Link to="/"><Button name="All"/></Link>
       {/* <Button name="Indie"/> */}
       <Link to="/gaming"><Button name="Gaming"/></Link>
       <Link to="/music"><Button name="Music"/></Link>

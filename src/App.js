@@ -13,6 +13,7 @@ import NewsVideos from "./components/NewsVideos";
 import ComedyVideos from "./components/Comedy";
 import SportsVideos from "./components/SportsVideos"
 import VideoContainer from "./components/VideoContainer";
+import SearchPage from "./components/SearchPage";
 
 
 const appRouter = createBrowserRouter([
@@ -31,35 +32,39 @@ const appRouter = createBrowserRouter([
           path:"/",
           element:<VideoContainer />
         },
+        
+        {
+          path:"music",
+          element:<MusicVideos />
+        },
+        {
+          path:"autovehicle",
+          element:<Automotive />
+        },
+        {
+          path:"news",
+          element:<NewsVideos />
+        },
+        {
+          path:"comedy",
+          element:<ComedyVideos />
+        },
+        {
+          path:"sports",
+          element:<SportsVideos />
+        },
+        {
+          path:"search",
+          element:<SearchPage />
+        }
      ]
-      },
-      {
-        path:"watch",
-        element:<WatchPage />
-      },
-      
-      {
-        path:"music",
-        element:<MusicVideos />
-      },
-      {
-        path:"autovehicle",
-        element:<Automotive />
-      },
-      {
-        path:"news",
-        element:<NewsVideos />
-      },
-      {
-        path:"comedy",
-        element:<ComedyVideos />
-      },
-      {
-        path:"sports",
-        element:<SportsVideos />
-      }
+      }, 
     ] 
-  }
+  },
+  {
+    path:"watch",
+    element:<WatchPage />
+  },
 ])
 
 function App() {
