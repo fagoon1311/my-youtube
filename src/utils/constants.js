@@ -17,4 +17,4 @@ export const YOUTUBE_NEWS_VIDEOS = "https://youtube.googleapis.com/youtube/v3/vi
 export const YOUTUBE_SPORTS_VIDEOS = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&regionCode=IN&videoCategoryId=17&chart=mostPopular&key=" + GOOGLE_API_KEY;
 export const YOUTUBE_CARS_VIDEOS = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&regionCode=IN&videoCategoryId=2&chart=mostPopular&key=" + GOOGLE_API_KEY;
 export const YOUTUBE_COMEDY_VIDEOS = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&regionCode=IN&videoCategoryId=23&chart=mostPopular&key=" + GOOGLE_API_KEY;
-
+export const YOUTUBE_SEARCH_API = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=&key=" + GOOGLE_API_KEY;

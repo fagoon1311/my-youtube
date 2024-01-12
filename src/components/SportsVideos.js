@@ -13,9 +13,9 @@ const SportsVideos = () => {
   const getSportsVideos = async() =>{
     const data = await fetch(YOUTUBE_SPORTS_VIDEOS)
     const json = await data.json()
-    // console.log(json.items)
+    //console.log(json.items)
     setSportsVideos(json.items)
-
+   
   }
   return (
     <div className='flex flex-wrap'>
@@ -24,6 +24,6 @@ const SportsVideos = () => {
       ))}
     </div>
   )
-}
+} 
 
 export default SportsVideos

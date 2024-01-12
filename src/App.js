@@ -54,7 +54,7 @@ const appRouter = createBrowserRouter([
           element:<SportsVideos />
         },
         {
-          path:"search",
+          path:"search/:searchId",
           element:<SearchPage />
         }
      ]
