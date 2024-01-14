@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 //import { GOOGLE_API_KEY } from "../utils/constants"
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { YOUTUBE_SEARCH_API } from '../utils/constants'
 import VideoCard from './VideoCard'
 import VideoSearchCard from './VideoSearchCard'
@@ -38,9 +38,10 @@ const SearchPage = () => {
   if (!Object.keys(searchResults).length) return <Shimmer />;
   return (
     <div className='flex flex-wrap'>
-      {/* <VideoCard info={searchResults[0]}/> */}
-      {searchResults.map((video)=>(<VideoCard info={video}/>))}
-      {/* <VideoSearchCard info={searchResults[0]}/> */}
+     
+      {searchResults.map((video)=>(
+      <Link key={video.id.videoId} to={"/watch?v="+video.id.videoId}><VideoCard info={video}/></Link>))}
+      
     </div>
   )
 }
