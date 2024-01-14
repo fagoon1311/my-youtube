@@ -14,64 +14,71 @@ import ComedyVideos from "./components/Comedy";
 import SportsVideos from "./components/SportsVideos"
 import VideoContainer from "./components/VideoContainer";
 import SearchPage from "./components/SearchPage";
+import Layout from "./components/Layout";
 
 
 const appRouter = createBrowserRouter([
   {
     path:"/",
-    element:<Body />,
+    element:<Layout/>,
     children:[
       {
         path:"/",
-        element:<MainContainer />,
-        children:[{
-          path:"gaming",
-          element:<GamingVideos />
-        },
-        {
-          path:"/",
-          element:<VideoContainer />
-        },
-        
-        {
-          path:"music",
-          element:<MusicVideos />
-        },
-        {
-          path:"autovehicle",
-          element:<Automotive />
-        },
-        {
-          path:"news",
-          element:<NewsVideos />
-        },
-        {
-          path:"comedy",
-          element:<ComedyVideos />
-        },
-        {
-          path:"sports",
-          element:<SportsVideos />
-        },
-        {
-          path:"search/:searchId",
-          element:<SearchPage />
-        }
-     ]
-      }, 
-    ] 
-  },
-  {
-    path:"watch",
-    element:<WatchPage />
-  },
+        element:<Body />,
+        children:[
+          {
+            path:"/",
+            element:<MainContainer />,
+            children:[{
+              path:"gaming",
+              element:<GamingVideos />
+            },
+            {
+              path:"/",
+              element:<VideoContainer />
+            },
+            
+            {
+              path:"music",
+              element:<MusicVideos />
+            },
+            {
+              path:"autovehicle",
+              element:<Automotive />
+            },
+            {
+              path:"news",
+              element:<NewsVideos />
+            },
+            {
+              path:"comedy",
+              element:<ComedyVideos />
+            },
+            {
+              path:"sports",
+              element:<SportsVideos />
+            },
+            {
+              path:"search/:searchId",
+              element:<SearchPage />
+            }
+         ]
+          }, 
+        ] 
+      },
+      {
+        path:"watch",
+        element:<WatchPage />
+      },
+    ]
+  }
+
 ])
 
 function App() {
   return (
     <Provider store={store}>
     <div >
-      <Head />
       <RouterProvider router={appRouter}/>
     </div>
     </Provider>
