@@ -9,7 +9,7 @@ export const YOUTUBE_VIDEOS_API =
   GOOGLE_API_KEY;
 
 
-export const YOUTUBE_SUGGESTION_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="
+export const YOUTUBE_SUGGESTION_API = "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="
 
 export const YOUTUBE_GAMING_VIDEOS = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&regionCode=IN&videoCategoryId=20&chart=mostPopular&key=" + GOOGLE_API_KEY;
 export const YOUTUBE_MUSIC_VIDEOS = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&regionCode=IN&videoCategoryId=10&chart=mostPopular&key=" + GOOGLE_API_KEY;
